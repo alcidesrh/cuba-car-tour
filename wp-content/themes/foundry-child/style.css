@@ -1,0 +1,22 @@
+/*
+ Theme Name:   Foundry Child
+ Theme URI:    http://example.com/twenty-fifteen-child/
+ Description:  Foundry Child Theme
+ Author:       Alcides Rodriguez
+ Author URI:   http://example.com
+ Template:     foundry
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  foundry-child
+*/
+.slider-all-controls.controls-inside.parallax{
+    margin-bottom: 0px;
+}
+.image-xs{
+    max-height: 100%;
+}
+.nav-utility .module.right{
+    display: none;
+}
