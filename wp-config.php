@@ -19,7 +19,7 @@
 define('DB_NAME', 'db753680406');
 
 /** Tu nombre de usuario de MySQL */
-define('DB_USER', 'db753680406');
+define('DB_USER', 'dbo753680406');
 
 /** Tu contraseña de MySQL */
 define('DB_PASSWORD', 'Rooflees.2018');
