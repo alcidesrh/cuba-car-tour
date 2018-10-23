@@ -435,7 +435,7 @@
             submit() {
                 this.reserve.error = false;
                 if (this.$refs.form.validate()) {
-                    this.$vuetify.goTo('#reserve-form', {0: 500});
+                    this.$vuetify.goTo('body', {duration: 500});
                     let $this = this;
                     this.initLoad();
                     if (this.extrasSelected.length)
