@@ -86,11 +86,11 @@ require_once(ABSPATH . 'wp-settings.php');
 
 
 define( 'SMTP_HOST', 'smtp.1and1.com' );  // A2 Hosting server name. For example, "a2ss10.a2hosting.com"
-define( 'SMTP_AUTH', true );
+//define( 'SMTP_AUTH', true );
 define( 'SMTP_PORT', '587' );
-define( 'SMTP_SECURE', 'ssl' );
+//define( 'SMTP_SECURE', 'ssl' );
 define( 'SMTP_USERNAME', 'info@rooflesscompany.com' );  // Username for SMTP authentication
 define( 'SMTP_PASSWORD', 'Roofless@123' );          // Password for SMTP authentication
-define( 'SMTP_FROM',     'user@example.com' );  // SMTP From address
+//define( 'SMTP_FROM',     'user@example.com' );  // SMTP From address
 //define( 'SMTP_FROMNAME', 'Kelly Koe' );
 
