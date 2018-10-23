@@ -123,6 +123,9 @@ function reserve_tour()
     $message = "";
     require __DIR__ . '/mails/reserve-tour.php';
     $headers = array('Content-Type: text/html; charset=UTF-8', "From: Me Myself <{$reserve['email']}>");
+    mail('alcides_rodriguez@unah.edu.cu','Subject of the e-mail','This is the body of the e-mail!');
+    echo 'success';
+    wp_die();
     if(wp_mail( [ 'alcides_rodriguez@unah.edu.cu' ], 'Correo de prueba', 'Hola' ))
     echo 'success';
     else echo 'error';
