@@ -122,7 +122,8 @@ function reserve_tour()
     }
     $message = "";
     require __DIR__ . '/mails/reserve-tour.php';
-    $headers = array('Content-Type: text/html; charset=UTF-8');
+
+    $headers = array('Content-Type: text/html; charset=UTF-8', "From: {$reserve['name']}<{$reserve['email']}>");
 
     if(wp_mail( [ 'alcides_rodriguez@unah.edu.cu' ], 'Reserva de Habana Tour', $message, $headers))
         echo 'success';
