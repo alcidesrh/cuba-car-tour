@@ -10,7 +10,7 @@ $message = "
 </br>
 Reserva Habana Tour:
 </br></br>
-Tour: {$post->post_title}
+Tour: {$tour_title}
 </br></br>
 Carro: {$car_type}, precio: {$car_price} cuc
 </br></br>
