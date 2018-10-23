@@ -66,7 +66,15 @@ class Custom_Field_Suite
 
 
     function find_fields( $params = array() ) {
-        return CFS()->api->find_input_fields( $params );
+        global $post;
+        $return = [];
+        $values = CFS()->api->find_input_fields( $params );
+        foreach ($values as $value){
+            if($value['value'] = CFS()->api->get($value['name'], $post->ID, [])){
+                $return[] = $value;
+            }
+        }
+        return $return;
     }
 
 

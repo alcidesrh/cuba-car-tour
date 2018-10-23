@@ -16,15 +16,19 @@
 
 // ** Ajustes de MySQL. Solicita estos datos a tu proveedor de alojamiento web. ** //
 /** El nombre de tu base de datos de WordPress */
+//define('DB_NAME', 'cuba-car-tour');
 define('DB_NAME', 'db753680406');
 
 /** Tu nombre de usuario de MySQL */
+//define('DB_USER', 'root');
 define('DB_USER', 'dbo753680406');
 
 /** Tu contraseña de MySQL */
+//define('DB_PASSWORD', '');
 define('DB_PASSWORD', 'Rooflees.2018');
 
 /** Host de MySQL (es muy probable que no necesites cambiarlo) */
+//define('DB_HOST', 'localhost');
 define('DB_HOST', 'db753680406.db.1and1.com');
 
 /** Codificación de caracteres para la base de datos. */
@@ -79,4 +83,14 @@ if ( !defined('ABSPATH') )
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
+
+
+define( 'SMTP_HOST', 'smtp.1and1.com' );  // A2 Hosting server name. For example, "a2ss10.a2hosting.com"
+define( 'SMTP_AUTH', true );
+define( 'SMTP_PORT', '587' );
+define( 'SMTP_SECURE', 'ssl' );
+define( 'SMTP_USERNAME', 'info@rooflesscompany.com' );  // Username for SMTP authentication
+define( 'SMTP_PASSWORD', 'Roofless@123' );          // Password for SMTP authentication
+define( 'SMTP_FROM',     'user@example.com' );  // SMTP From address
+//define( 'SMTP_FROMNAME', 'Kelly Koe' );
 
