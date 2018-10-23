@@ -442,10 +442,10 @@
                         this.reserve.extras = this.extrasSelected.map(item => item.ID);
                     var data = new FormData();
                     data.append('action', 'reserve_tour');
-                    console.log(this.reserve);
                     data.append('reserve', JSON.stringify(this.reserve));
                     axios.post(params.ajax_url, data).then(function (response) {
                         $this.stopLoad();
+                        console.log(response.data);
                         if (response.data == 'success')
                             $this.reserve.sent = true;
                         else
