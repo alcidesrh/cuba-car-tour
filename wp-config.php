@@ -84,3 +84,6 @@ if ( !defined('ABSPATH') )
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
 
+define( 'WPMS_ON', true );
+define( 'WPMS_SMTP_PASS', 'Roofless@123' );
+
