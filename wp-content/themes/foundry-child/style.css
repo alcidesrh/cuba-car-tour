@@ -99,3 +99,45 @@ hr{
     height: auto;
     max-height: none;
 }
+.d-inline{
+    display: inline;
+}
+.btn-title{
+    padding: 8px;
+    background: #47b475;
+    color: white !important;
+    margin-left: 15px;
+}
+.route-map{
+    max-height: 380px;
+}
+@media only screen and (max-width: 787px) {
+    .logo.logo-dark{
+        max-width: 250px;
+    }
+    .post-content{
+        margin-top: 15px;
+    }
+    .title-text{
+        margin-left: 15px;
+    }
+    form{
+        padding: 0px 12px;
+    }
+    .v-input__prepend-outer{
+        margin-right: 0px !important;
+    }
+    hr.my-5{
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+    .v-list__tile__sub-title:not(.text--primary){
+        display: none !important;
+    }
+    .v-list__tile__action{
+        min-width: auto !important;
+    }
+    .v-list__tile__content{
+        padding: 0px 3px;
+    }
+}

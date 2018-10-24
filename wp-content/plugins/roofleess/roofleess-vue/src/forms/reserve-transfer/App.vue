@@ -23,57 +23,7 @@
             >
                 There was an error receiving your request. Please try again. Thank you.
             </v-alert>
-            <v-form v-if="customize" id="reserve-form" v-show="!reserve.sent" ref="form" v-model="valid" lazy-validation
-                    class="center-form mt-3">
-                <v-layout row wrap>
-                    <v-flex xs12>
-                        <v-text-field
-                                v-model="reserve.name"
-                                label="Full name"
-                                prepend-icon="person"
-                                required
-                                :rules="fieldRules"
-                        ></v-text-field>
-                    </v-flex>
-                </v-layout>
-                <v-layout row wrap>
-                    <v-flex xs12>
-                        <v-text-field
-                                v-model="reserve.email"
-                                prepend-icon="email"
-                                :rules="emailRules"
-                                label="E-mail"
-                                required
-                        ></v-text-field>
-                    </v-flex>
-                </v-layout>
-                <v-layout row wrap>
-                    <v-flex xs12>
-                        <v-text-field
-                                v-model="reserve.phone"
-                                label="Phone (not obligated)"
-                                prepend-icon="phone"
-                        ></v-text-field>
-                    </v-flex>
-                </v-layout>
-                <v-layout row wrap>
-                    <v-flex xs12>
-                        <v-textarea
-                                v-model="reserve.note"
-                                label="Note"
-                                prepend-icon="note"
-                                hint="Hint text"
-                                rows="5"
-                        ></v-textarea>
-                    </v-flex>
-                </v-layout>
-                <v-layout row wrap mt-3>
-                    <v-flex xs12>
-                        <v-btn block color="green" dark @click="submit">send request</v-btn>
-                    </v-flex>
-                </v-layout>
-            </v-form>
-            <v-form v-if="!customize"id="reserve-form" v-show="!reserve.sent" ref="form" v-model="valid" lazy-validation v-bind:style="{ opacity: opacity}"
+            <v-form id="reserve-form" v-show="!reserve.sent" ref="form" v-model="valid" lazy-validation v-bind:style="{ opacity: opacity}"
                     class="center-form mt-3">
                 <v-layout row wrap>
                     <v-flex xs12>
@@ -322,7 +272,6 @@
             tours: [],
             tour: {},
             cars: [],
-            customize: false,
             reserve: {date: null, time: null},
             interval: {},
             value: 0,
@@ -434,10 +383,6 @@
             }
         },
         created() {
-            if(params.customize){
-                this.customize = true;
-                return;
-            }
             let $this = this;
             this.initLoad();
             axios.get(params.ajax_url, {

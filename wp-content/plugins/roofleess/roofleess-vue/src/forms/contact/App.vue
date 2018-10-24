@@ -10,25 +10,25 @@
             >
                 {{ value }}
             </v-progress-circular>
-            <v-alert v-show="contact.sent" class="center-form mt-3"
+            <v-alert v-show="reserve.sent" class="center-form mt-3"
                     :value="true"
                     color="success"
                     icon="check_circle"
             >
                 Your message was received. We will put in contact with you as soon as posible, keep checking your email inbox for confirmation of your reseve. Thank you.
             </v-alert>
-            <v-alert v-show="contact.error" class="center-form mt-3"
+            <v-alert v-show="reserve.error" class="center-form mt-3"
                     :value="true"
                     type="error"
             >
                 There was an error receiving your request. Please try again. Thank you.
             </v-alert>
-            <v-form id="contact-form" v-show="!contact.sent" ref="form" v-model="valid" lazy-validation v-bind:style="{ opacity: opacity, minWidth: '400px'}"
+            <v-form id="contact-form" v-show="!reserve.sent" ref="form" v-model="valid" lazy-validation v-bind:style="{ opacity: opacity, minWidth: '400px'}"
                     class="center-form mt-3" >
                 <v-layout row wrap>
                     <v-flex xs12>
                         <v-text-field
-                                v-model="contact.name"
+                                v-model="reserve.name"
                                 label="Full name"
                                 prepend-icon="person"
                                 required
@@ -39,7 +39,7 @@
                 <v-layout row wrap>
                     <v-flex xs12>
                         <v-text-field
-                                v-model="contact.email"
+                                v-model="reserve.email"
                                 prepend-icon="email"
                                 :rules="emailRules"
                                 label="E-mail"
@@ -50,7 +50,7 @@
                 <v-layout row wrap>
                     <v-flex xs12>
                         <v-text-field
-                                v-model="contact.phone"
+                                v-model="reserve.phone"
                                 label="Phone (not obligated)"
                                 prepend-icon="phone"
                         ></v-text-field>
@@ -59,7 +59,7 @@
                 <v-layout row wrap>
                     <v-flex xs12>
                         <v-textarea
-                                v-model="contact.note"
+                                v-model="reserve.note"
                                 label="Note"
                                 prepend-icon="note"
                                 hint="Hint text"
@@ -87,7 +87,7 @@
             load: false,
             name: '',
 
-            contact: {},
+            reserve: {},
             interval: {},
             value: 0,
             fieldRules: [
@@ -121,20 +121,20 @@
                 this.value = 0;
             },
             submit() {
-                this.contact.error = false;
+                this.reserve.error = false;
                 if (this.$refs.form.validate()) {
                     this.$vuetify.goTo('#contact-form', {0: 500});
                     let $this = this;
                     this.initLoad();
                     var data = new FormData();
                     data.append('action', 'contact');
-                    data.append('contact', JSON.stringify(this.contact));
+                    data.append('reserve', JSON.stringify(this.reserve));
                     axios.post(params.ajax_url, data).then(function (response) {
                         $this.stopLoad();
                         if(response.data == 'success')
-                        $this.contact.sent = true;
+                        $this.reserve.sent = true;
                         else
-                            $this.contact.error = true;
+                            $this.reserve.error = true;
                     }).catch(function (error) {
                             $this.stopLoad();
                         });

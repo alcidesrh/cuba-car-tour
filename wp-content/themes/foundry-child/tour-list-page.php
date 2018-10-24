@@ -33,9 +33,9 @@ foreach ( $posts as $value ):
                     <?php endif; ?>
 
                     <div class="row mt-1">
-                        <div class="col-lg-6"><a href="<?php echo esc_url( get_permalink() ) ?>"
+                        <div class="col-xs-6 center"><a href="<?php echo esc_url( get_permalink() ) ?>"
                                                  class="btn btn-sm btn-primary">Detail</a></div>
-                        <div class="col-lg-6"><a
+                        <div class="col-xs-6 center"><a
                                     href="<?php echo esc_url( add_query_arg( 'id', $post->ID, get_permalink( getFormPageId($post->ID)) ) )?>"
                                     class="btn btn-sm btn-primary">Reserve</a></div>
                     </div>

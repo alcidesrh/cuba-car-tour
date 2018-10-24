@@ -1,13 +1,3 @@
-<div class="container">
-    <article class="post post-medium">
-        <div class="row">
-        <div class="col-md-12">
-
-        </div>
-<a
-            href="<?php echo esc_url( add_query_arg( 'transfer', 'customize', get_permalink( 230) ) )?>"
-            class="btn btn-sm btn-primary">Request a customize transfer</a>
-        </div></article></div>
 <?php
 
 foreach ( $posts as $value ):
@@ -28,7 +18,7 @@ foreach ( $posts as $value ):
                         <?php get_template_part( 'inc/content', 'post-title' ); ?>
                         <?php if ( !empty( $price_sedan ) ): ?>
                             <h5>Sedan price: <?php echo getPriceCuc( $price_sedan ) ?></h5>
-                        <?php endif;?>
+                        <?php endif; ?>
                         <?php if ( !empty( $price_convertible ) ): ?>
                             <h5>Convertible price: <?php echo getPriceCuc( $price_convertible ) ?></h5>
                         <?php endif; ?>
@@ -38,12 +28,12 @@ foreach ( $posts as $value ):
                 </div>
                 <div class="col-lg-2">
                     <div class="row mt-1">
-                        <div class="col-lg-6"><a
-                                    href="<?php echo esc_url( add_query_arg( 'id', $post->ID, get_permalink( getFormPageId($post->ID)) ) )?>"
-                                    class="btn btn-sm btn-primary">Reserve</a></div>
+                        <div class="col-xs-12 col-md-6 center">
+                            <a href="<?php echo esc_url( add_query_arg( 'id', $post->ID, get_permalink( getFormPageId( $post->ID ) ) ) ) ?>"
+                                    class="btn btn-sm btn-primary">Reserve</a>
+                        </div>
                     </div>
                 </div>
-
             </div>
         </article>
         <hr class="my-5">

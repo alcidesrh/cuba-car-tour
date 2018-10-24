@@ -16,6 +16,7 @@ if ( ! class_exists( 'Roofleess' ) ) {
         private $shortcode_contact_form = 'roofleess_contact_form';
         private $shortcode_feedback = 'roofleess_feedback';
         private $shortcode_home_havana_tour = 'roofleess_home_havana_tour';
+        private $shortcode_customize_request = 'roofleess_customize_request';
 
         public function register() {
             add_shortcode( $this->shortcode_reserve_form, [$this, 'reserveForm'] );
@@ -25,6 +26,7 @@ if ( ! class_exists( 'Roofleess' ) ) {
             add_shortcode( $this->shortcode_contact_form, [$this, 'contactForm'] );
             add_shortcode( $this->shortcode_feedback, [$this, 'feedbackForm'] );
             add_shortcode( $this->shortcode_home_havana_tour, [$this, 'havanaTourHome'] );
+            add_shortcode( $this->shortcode_customize_request, [$this, 'customizeRequest'] );
         }
 
         public function reserveForm( $atts ) {
@@ -70,6 +72,13 @@ if ( ! class_exists( 'Roofleess' ) ) {
         public function feedbackForm( $atts ) {
             wp_enqueue_script( 'feedback-form', plugin_dir_url( __FILE__ ) . 'roofleess-vue/dist/testimonial/build.js', [], '0.1', true );
             wp_localize_script( 'feedback-form', 'params',['ajax_url'=>admin_url('admin-ajax.php')] );
+
+            wp_enqueue_style( 'material-icon', plugin_dir_url( __FILE__ ) . 'roofleess-vue/public/iconfont/material-icons.css', [], '0.1' );
+        }
+
+        public function customizeRequest( $atts ) {
+            wp_enqueue_script( 'customize-request', plugin_dir_url( __FILE__ ) . 'roofleess-vue/dist/customize-request/build.js', [], '0.1', true );
+            wp_localize_script( 'customize-request', 'params',['ajax_url'=>admin_url('admin-ajax.php'), 'category' => $atts[ 'category' ]] );
 
             wp_enqueue_style( 'material-icon', plugin_dir_url( __FILE__ ) . 'roofleess-vue/public/iconfont/material-icons.css', [], '0.1' );
         }

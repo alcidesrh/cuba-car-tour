@@ -135,7 +135,32 @@ add_action( 'wp_ajax_nopriv_reserve_day_tour', 'reserve_day_tour' );
 function reserve_day_tour()
 {
     $reserve = json_decode( stripslashes( $_POST[ 'reserve' ] ), true );
-    echo 'success';
+    global $post;
+    $post = get_post( $reserve[ 'tour' ] );
+    if ( $reserve[ 'car' ] == 2 ) {
+        $car_type = 'Convertible';
+        $car_price = types_render_field( 'precio-por-convertible' );
+    } else {
+        $car_type = 'Sedan';
+        $car_price = types_render_field( 'precio-por-sedan' );
+    }
+    $tour_title = $post->post_title;
+    if ( $includes = cptr_populate( $post->ID ) ) {
+        $extras = [];
+        foreach ( $includes as $include ) {
+            $post = get_post( $include->ID );;
+            $post->price = types_render_field( 'precio' );
+            $extras[] = $post;
+
+        }
+    }
+    $message = "";
+    require __DIR__ . '/mails/reserve-day-tour.php';
+
+    $headers = array( 'Content-Type: text/html; charset=UTF-8' );
+
+    if ( wp_mail( get_bloginfo( 'admin_email' ), 'Reserva de Habana Tour', $message, $headers ) )
+        echo 'success'; else echo 'error';
     wp_die();
 }
 
@@ -143,8 +168,25 @@ add_action( 'wp_ajax_reserve_transfer', 'reserve_transfer' );
 add_action( 'wp_ajax_nopriv_reserve_transfer', 'reserve_transfer' );
 function reserve_transfer()
 {
+
     $reserve = json_decode( stripslashes( $_POST[ 'reserve' ] ), true );
-    echo 'success';
+    global $post;
+    $post = get_post( $reserve[ 'tour' ] );
+    if ( $reserve[ 'car' ] == 2 ) {
+        $car_type = 'Convertible';
+        $car_price = types_render_field( 'precio-por-convertible' );
+    } else {
+        $car_type = 'Sedan';
+        $car_price = types_render_field( 'precio-por-sedan' );
+    }
+    $tour_title = $post->post_title;
+    $message = "";
+    require __DIR__ . '/mails/reserve-transfer.php';
+
+    $headers = array( 'Content-Type: text/html; charset=UTF-8' );
+
+    if ( wp_mail( get_bloginfo( 'admin_email' ), 'Reserva de Habana Tour', $message, $headers ) )
+        echo 'success'; else echo 'error';
     wp_die();
 }
 
@@ -161,8 +203,14 @@ add_action( 'wp_ajax_contact', 'contact' );
 add_action( 'wp_ajax_nopriv_contact', 'contact' );
 function contact()
 {
-    $reserve = json_decode( stripslashes( $_POST[ 'contact' ] ), true );
-    echo 'success';
+    $reserve = json_decode( stripslashes( $_POST[ 'reserve' ] ), true );
+    $message = "";
+    require __DIR__ . '/mails/contact.php';
+
+    $headers = array( 'Content-Type: text/html; charset=UTF-8' );
+
+    if ( wp_mail( get_bloginfo( 'admin_email' ), 'Reserva de Habana Tour', $message, $headers ) )
+        echo 'success'; else echo 'error';
     wp_die();
 }
 

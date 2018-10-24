@@ -344,7 +344,7 @@
                     this.initLoad();
                 else
                     params.tour_id = false;
-                this.items = this.tours.filter(item => item.id = this.reserve.tour);
+                this.items = this.tours.filter(item => item.ID == this.reserve.tour);
                 this.tour = this.items[0];
                 this.cars = [{
                     car: 'Sedan',

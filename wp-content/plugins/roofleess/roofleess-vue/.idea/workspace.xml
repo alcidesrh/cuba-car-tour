@@ -14,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="webpack.config.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="webpack.config.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/webpack.config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="7" lean-forward="false" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+            <state relative-caret-position="17">
+              <caret line="6" column="39" lean-forward="false" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -37,25 +37,75 @@
       <file leaf-file-name="App.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/forms/reserve-day-tour/App.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5644">
-              <caret line="340" column="25" lean-forward="false" selection-start-line="340" selection-start-column="25" selection-end-line="340" selection-end-column="25" />
+            <state relative-caret-position="205">
+              <caret line="418" column="28" lean-forward="false" selection-start-line="418" selection-start-column="28" selection-end-line="418" selection-end-column="28" />
               <folding>
                 <element signature="n#v-progress-circular#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="e#17043#17490#0" expanded="false" />
-                <element signature="e#17515#17676#0" expanded="false" />
-                <element signature="e#19071#19126#0" expanded="false" />
+                <element signature="e#17044#17491#0" expanded="false" />
+                <element signature="e#17516#17677#0" expanded="false" />
+                <element signature="e#19072#19127#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="App.vue" pinned="false" current-in-tab="true">
+      <file leaf-file-name="App.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/forms/contact/App.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="137">
+              <caret line="130" column="40" lean-forward="false" selection-start-line="130" selection-start-column="40" selection-end-line="130" selection-end-column="40" />
+              <folding>
+                <element signature="n#v-layout#0;n#v-form#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
+                <element signature="n#v-layout#1;n#v-form#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
+                <element signature="n#v-layout#2;n#v-form#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
+                <element signature="e#3798#4245#0" expanded="false" />
+                <element signature="e#4270#4431#0" expanded="false" />
+                <element signature="e#5451#5506#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="App.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/forms/reserve-tour/App.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="437" column="56" lean-forward="false" selection-start-line="437" selection-start-column="56" selection-end-line="437" selection-end-column="56" />
+            <state relative-caret-position="255">
+              <caret line="381" column="65" lean-forward="false" selection-start-line="381" selection-start-column="65" selection-end-line="381" selection-end-column="65" />
               <folding>
                 <element signature="n#v-flex#0;n#v-layout#1;n#v-form#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="App.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/forms/customize-request/App.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="60" column="30" lean-forward="false" selection-start-line="60" selection-start-column="29" selection-end-line="60" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="App.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/forms/reserve-transfer/App.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="159" column="44" lean-forward="true" selection-start-line="159" selection-start-column="44" selection-end-line="159" selection-end-column="53" />
+              <folding>
+                <element signature="n#v-layout#2;n#v-form#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
+                <element signature="n#v-flex#0;n#v-layout#2;n#v-form#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
+                <element signature="n#v-layout#3;n#v-form#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
+                <element signature="n#v-layout#4;n#v-form#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
+                <element signature="n#v-layout#6;n#v-form#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
+                <element signature="n#v-layout#7;n#v-form#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
+                <element signature="n#v-layout#8;n#v-form#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
+                <element signature="n#v-layout#9;n#v-form#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
+                <element signature="e#13690#13891#0" expanded="false" />
+                <element signature="e#14448#14895#0" expanded="false" />
+                <element signature="e#14920#15081#0" expanded="false" />
+                <element signature="e#16384#16439#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -65,13 +115,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>price</find>
-      <find>cars.f</find>
-      <find>reserve.car</find>
-      <find>reserve.pe</find>
-      <find>.car</find>
-      <find>total()</find>
-      <find>total</find>
       <find>total(</find>
       <find>conso</find>
       <find>cars</find>
@@ -93,14 +136,23 @@
       <find>sedan</find>
       <find>seda</find>
       <find>alert</find>
-      <find>console</find>
       <find>goTo</find>
+      <find>customize</find>
+      <find>name</find>
+      <find>customize-request</find>
+      <find>items</find>
+      <find>console</find>
+      <find>got</find>
+      <find>contact</find>
+      <find>erve.name</find>
     </findStrings>
     <replaceStrings>
       <replace>menu2</replace>
       <replace>event.keyCode</replace>
       <replace>contact</replace>
       <replace>label=&quot;Phone (not obligated)&quot;</replace>
+      <replace>reserve-transfer</replace>
+      <replace>reserve</replace>
     </replaceStrings>
     <dirStrings>
       <dir>D:\xampp7.2\htdocs\cuba-car-tour\wp-content\plugins\roofleess\roofleess-vue\src</dir>
@@ -120,14 +172,15 @@
         <option value="$PROJECT_DIR$/src/forms/contact/main.js" />
         <option value="$PROJECT_DIR$/src/forms/rent-car/main.js" />
         <option value="$PROJECT_DIR$/src/forms/testimonial/main.js" />
-        <option value="$PROJECT_DIR$/src/forms/contact/App.vue" />
         <option value="$APPLICATION_CONFIG_DIR$/webstorm64.exe.vmoptions" />
         <option value="$PROJECT_DIR$/src/forms/rent-car/App.vue" />
-        <option value="$PROJECT_DIR$/src/forms/reserve-transfer/App.vue" />
         <option value="$PROJECT_DIR$/src/forms/testimonial/App.vue" />
-        <option value="$PROJECT_DIR$/src/forms/reserve-day-tour/App.vue" />
-        <option value="$PROJECT_DIR$/webpack.config.js" />
+        <option value="$PROJECT_DIR$/src/forms/reserve-transfer/App.vue" />
         <option value="$PROJECT_DIR$/src/forms/reserve-tour/App.vue" />
+        <option value="$PROJECT_DIR$/src/forms/reserve-day-tour/App.vue" />
+        <option value="$PROJECT_DIR$/src/forms/contact/App.vue" />
+        <option value="$PROJECT_DIR$/src/forms/customize-request/App.vue" />
+        <option value="$PROJECT_DIR$/webpack.config.js" />
       </list>
     </option>
   </component>
@@ -142,7 +195,7 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="417" />
     <option name="y" value="144" />
     <option name="width" value="1364" />
@@ -179,7 +232,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -208,14 +260,14 @@
               <item name="roofleess-vue" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="forms" type="462c0819:PsiDirectoryNode" />
-              <item name="reserve-day-tour" type="462c0819:PsiDirectoryNode" />
+              <item name="contact" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="roofleess-vue" type="b2602c69:ProjectViewProjectNode" />
               <item name="roofleess-vue" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="forms" type="462c0819:PsiDirectoryNode" />
-              <item name="reserve-tour" type="462c0819:PsiDirectoryNode" />
+              <item name="reserve-transfer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="roofleess-vue" type="b2602c69:ProjectViewProjectNode" />
@@ -228,6 +280,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -284,25 +337,27 @@
       <workItem from="1539611452481" duration="4613000" />
       <workItem from="1539912863697" duration="21119000" />
       <workItem from="1540213910300" duration="1974000" />
-      <workItem from="1540302015266" duration="1220000" />
+      <workItem from="1540302015266" duration="1824000" />
+      <workItem from="1540349751108" duration="2674000" />
+      <workItem from="1540395182823" duration="3435000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="156821000" />
+    <option name="totallyTimeSpent" value="163534000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24627976" sideWeight="0.4940171" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.50598294" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.50598294" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21538462" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2017094" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -328,14 +383,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/webpack.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/forms/rent-car/App.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
@@ -370,21 +417,18 @@
         <state relative-caret-position="7038">
           <caret line="414" column="59" lean-forward="false" selection-start-line="414" selection-start-column="43" selection-end-line="414" selection-end-column="59" />
           <folding>
-            <element signature="n#v-form#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#v-layout#0;n#v-form#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#v-layout#1;n#v-form#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#v-flex#0;n#v-layout#2;n#v-form#1;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#v-layout#3;n#v-form#1;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#v-layout#4;n#v-form#1;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#v-layout#5;n#v-form#1;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#v-layout#6;n#v-form#1;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#v-layout#7;n#v-form#1;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#v-layout#8;n#v-form#1;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#v-layout#9;n#v-form#1;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="e#15890#16091#0" expanded="false" />
-            <element signature="e#16648#17095#0" expanded="false" />
-            <element signature="e#17120#17281#0" expanded="false" />
-            <element signature="e#18584#18639#0" expanded="false" />
+            <element signature="n#v-layout#2;n#v-form#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#v-flex#0;n#v-layout#2;n#v-form#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#v-layout#3;n#v-form#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#v-layout#4;n#v-form#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#v-layout#6;n#v-form#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#v-layout#7;n#v-form#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#v-layout#8;n#v-form#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#v-layout#9;n#v-form#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="e#13690#13891#0" expanded="false" />
+            <element signature="e#14448#14895#0" expanded="false" />
+            <element signature="e#14920#15081#0" expanded="false" />
+            <element signature="e#16384#16439#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -416,21 +460,18 @@
         <state relative-caret-position="7038">
           <caret line="414" column="59" lean-forward="false" selection-start-line="414" selection-start-column="43" selection-end-line="414" selection-end-column="59" />
           <folding>
-            <element signature="n#v-form#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#v-layout#0;n#v-form#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#v-layout#1;n#v-form#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#v-flex#0;n#v-layout#2;n#v-form#1;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#v-layout#3;n#v-form#1;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#v-layout#4;n#v-form#1;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#v-layout#5;n#v-form#1;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#v-layout#6;n#v-form#1;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#v-layout#7;n#v-form#1;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#v-layout#8;n#v-form#1;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#v-layout#9;n#v-form#1;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="e#15890#16091#0" expanded="false" />
-            <element signature="e#16648#17095#0" expanded="false" />
-            <element signature="e#17120#17281#0" expanded="false" />
-            <element signature="e#18584#18639#0" expanded="false" />
+            <element signature="n#v-layout#2;n#v-form#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#v-flex#0;n#v-layout#2;n#v-form#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#v-layout#3;n#v-form#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#v-layout#4;n#v-form#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#v-layout#6;n#v-form#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#v-layout#7;n#v-form#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#v-layout#8;n#v-form#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#v-layout#9;n#v-form#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="e#13690#13891#0" expanded="false" />
+            <element signature="e#14448#14895#0" expanded="false" />
+            <element signature="e#14920#15081#0" expanded="false" />
+            <element signature="e#16384#16439#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -670,21 +711,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/forms/contact/App.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1921">
-          <caret line="161" column="18" lean-forward="false" selection-start-line="161" selection-start-column="18" selection-end-line="161" selection-end-column="18" />
-          <folding>
-            <element signature="n#v-layout#0;n#v-form#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#v-layout#1;n#v-form#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#v-layout#2;n#v-form#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="e#3798#4245#0" expanded="false" />
-            <element signature="e#4270#4431#0" expanded="false" />
-            <element signature="e#5451#5506#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/webstorm64.exe.vmoptions">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -700,38 +726,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/forms/reserve-transfer/App.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="77" column="16" lean-forward="false" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="16" />
-          <folding>
-            <element signature="n#v-form#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#v-layout#0;n#v-form#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#v-layout#1;n#v-form#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#v-flex#0;n#v-layout#2;n#v-form#1;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#v-layout#3;n#v-form#1;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#v-layout#4;n#v-form#1;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#v-layout#5;n#v-form#1;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#v-layout#6;n#v-form#1;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#v-layout#7;n#v-form#1;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#v-layout#8;n#v-form#1;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#v-layout#9;n#v-form#1;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="e#15890#16091#0" expanded="false" />
-            <element signature="e#16648#17095#0" expanded="false" />
-            <element signature="e#17120#17281#0" expanded="false" />
-            <element signature="e#18584#18639#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webpack.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="7" lean-forward="false" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/forms/testimonial/App.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1258">
@@ -740,26 +734,78 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/forms/reserve-day-tour/App.vue">
+    <entry file="file://$PROJECT_DIR$/src/forms/reserve-tour/App.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5644">
-          <caret line="340" column="25" lean-forward="false" selection-start-line="340" selection-start-column="25" selection-end-line="340" selection-end-column="25" />
+        <state relative-caret-position="255">
+          <caret line="381" column="65" lean-forward="false" selection-start-line="381" selection-start-column="65" selection-end-line="381" selection-end-column="65" />
           <folding>
-            <element signature="n#v-progress-circular#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="e#17043#17490#0" expanded="false" />
-            <element signature="e#17515#17676#0" expanded="false" />
-            <element signature="e#19071#19126#0" expanded="false" />
+            <element signature="n#v-flex#0;n#v-layout#1;n#v-form#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/forms/reserve-tour/App.vue">
+    <entry file="file://$PROJECT_DIR$/src/forms/reserve-day-tour/App.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="437" column="56" lean-forward="false" selection-start-line="437" selection-start-column="56" selection-end-line="437" selection-end-column="56" />
+        <state relative-caret-position="205">
+          <caret line="418" column="28" lean-forward="false" selection-start-line="418" selection-start-column="28" selection-end-line="418" selection-end-column="28" />
           <folding>
-            <element signature="n#v-flex#0;n#v-layout#1;n#v-form#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#v-progress-circular#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="e#17044#17491#0" expanded="false" />
+            <element signature="e#17516#17677#0" expanded="false" />
+            <element signature="e#19072#19127#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/forms/contact/App.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="130" column="40" lean-forward="false" selection-start-line="130" selection-start-column="40" selection-end-line="130" selection-end-column="40" />
+          <folding>
+            <element signature="n#v-layout#0;n#v-form#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#v-layout#1;n#v-form#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#v-layout#2;n#v-form#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="e#3798#4245#0" expanded="false" />
+            <element signature="e#4270#4431#0" expanded="false" />
+            <element signature="e#5451#5506#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/forms/reserve-transfer/App.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="159" column="44" lean-forward="true" selection-start-line="159" selection-start-column="44" selection-end-line="159" selection-end-column="53" />
+          <folding>
+            <element signature="n#v-layout#2;n#v-form#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#v-flex#0;n#v-layout#2;n#v-form#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#v-layout#3;n#v-form#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#v-layout#4;n#v-form#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#v-layout#6;n#v-form#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#v-layout#7;n#v-form#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#v-layout#8;n#v-form#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#v-layout#9;n#v-form#0;n#v-container#0;n#v-app#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="e#13690#13891#0" expanded="false" />
+            <element signature="e#14448#14895#0" expanded="false" />
+            <element signature="e#14920#15081#0" expanded="false" />
+            <element signature="e#16384#16439#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/forms/customize-request/App.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="60" column="30" lean-forward="false" selection-start-line="60" selection-start-column="29" selection-end-line="60" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webpack.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="6" column="39" lean-forward="false" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>
