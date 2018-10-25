@@ -64,18 +64,23 @@ add_action( 'wp_ajax_rent_car', 'rent_car' );
 add_action( 'wp_ajax_nopriv_rent_car', 'rent_car' );
 function rent_car()
 {
-    $result = [];
     global $post;
-    if ( $posts = get_posts( [ 'post_type' => 'rent-car-type', 'numberposts' => -1 ] ) )
-        foreach ( $posts as $value ) {
-            $post = $value;
-            $post->price_per_sedan_12 = types_render_field( 'sedan-12-horas' );
-            $post->price_per_convertible_12 = types_render_field( 'convertible-12-horas' );
-            $post->price_per_sedan = types_render_field( 'sedan-por-dia' );
-            $post->price_per_convertible = types_render_field( 'convertible-por-dia' );
-            $result[] = $post;
+    $post = get_post(378);
+    $car_type = json_decode( stripslashes( $_GET[ 'car_type' ] ), true );
+    switch ($car_type){
+        case 1:{
+            echo json_encode( ['price_sedan' => types_render_field( 'sedan-12-horas' ), 'price_convertible' => types_render_field( 'convertible-12-horas' )] );
+            wp_die();
         }
-    echo json_encode( $result );
+        case 2:{
+            echo json_encode( ['price_sedan' => types_render_field( 'sedan-1-dia' ), 'price_convertible' => types_render_field( 'convertible-1-dia' )] );
+            wp_die();
+        }
+        case 3:{
+            echo json_encode( ['price_sedan' => types_render_field( 'sedan-por-dia' ), 'price_convertible' => types_render_field( 'convertible-por-dia' )] );
+            wp_die();
+        }
+    }
     wp_die();
 }
 
@@ -195,7 +200,21 @@ add_action( 'wp_ajax_nopriv_reserve_car', 'reserve_car' );
 function reserve_car()
 {
     $reserve = json_decode( stripslashes( $_POST[ 'reserve' ] ), true );
-    echo 'success';
+    global $post;
+    $post = get_post(378);
+    if ( $reserve[ 'car' ] == 2 ) {
+        $car_type = 'Convertible';
+    } else {
+        $car_type = 'Sedan';
+    }
+    $car_price = $reserve['car_price'];
+    $message = "";
+    require __DIR__ . '/mails/reserve-rent-car.php';
+
+    $headers = array( 'Content-Type: text/html; charset=UTF-8' );
+
+    if ( wp_mail( get_bloginfo( 'admin_email' ), 'Reserva de Habana Tour', $message, $headers ) )
+        echo 'success'; else echo 'error';
     wp_die();
 }
 

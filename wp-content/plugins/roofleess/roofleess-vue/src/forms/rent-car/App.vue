@@ -29,34 +29,20 @@
                     class="center-form mt-3">
                 <v-layout row wrap>
                     <v-flex xs12>
-                        <v-radio-group v-model="radioGroup">
+                        <v-radio-group v-model="radioGroup" row>
                             <v-radio
-                                    key="1"
-                                    label="12 Hours"
-                                    value="12"
-                            ></v-radio>
-                            <v-radio
-                                    key="2"
-                                    label="One or more days"
+                                    label="12 hours"
                                     value="1"
                             ></v-radio>
+                            <v-radio
+                                    label="1 day"
+                                    value="2"
+                            ></v-radio>
+                            <v-radio
+                                    label="2 or more days"
+                                    value="3"
+                            ></v-radio>
                         </v-radio-group>
-                    </v-flex>
-                </v-layout>
-                <v-layout row wrap>
-                    <v-flex xs12>
-                        <v-select
-                                v-model="reserve.tour"
-                                :items="tours"
-                                :rules="fieldRules"
-                                item-text="post_title"
-                                item-value="ID"
-                                label="Rent Type"
-                                prepend-icon="accessible"
-                                required
-                                @change="selectRent()"
-                        >
-                        </v-select>
                     </v-flex>
                 </v-layout>
                 <v-layout row wrap>
@@ -107,13 +93,13 @@
                             <v-text-field
                                     slot="activator"
                                     v-model="reserve.date"
-                                    label="Start tour day"
+                                    label="Start rent day"
                                     prepend-icon="event"
                                     readonly
                                     required
                                     :rules="fieldRules"
                             ></v-text-field>
-                            <v-date-picker v-model="reserve.date"
+                            <v-date-picker v-model="reserve.date" :min="currentDate"
                                            @input="$refs.date_picker.save(reserve.date)"></v-date-picker>
 
                         </v-menu>
@@ -135,7 +121,7 @@
                             <v-text-field
                                     slot="activator"
                                     v-model="reserve.time"
-                                    label="Start transfer time"
+                                    label="Start rent time"
                                     prepend-icon="access_time"
                                     readonly
                                     required
@@ -146,6 +132,66 @@
                                     v-model="reserve.time"
                                     full-width
                                     @change="$refs.time_picker.save(reserve.time)"
+                            ></v-time-picker>
+                        </v-menu>
+                    </v-flex>
+                </v-layout>
+                <v-layout row wrap v-if="radioGroup == 3">
+                    <v-flex xs12 sm6>
+                        <v-menu
+                                ref="date_picker2"
+                                :close-on-content-click="false"
+                                v-model="date_picker2"
+                                :nudge-right="40"
+                                :return-value.sync="reserve.dateEnd"
+                                lazy
+                                transition="scale-transition"
+                                offset-y
+                                full-width
+                                min-width="290px"
+                        >
+                            <v-text-field
+                                    slot="activator"
+                                    v-model="reserve.dateEnd"
+                                    label="End rent"
+                                    prepend-icon="event"
+                                    readonly
+                                    required
+                                    :rules="fieldRules"
+                            ></v-text-field>
+                            <v-date-picker v-model="reserve.dateEnd" :min="reserve.date"
+                                           @input="$refs.date_picker2.save(reserve.dateEnd)"></v-date-picker>
+
+                        </v-menu>
+                    </v-flex>
+                    <v-flex xs12 sm6>
+                        <v-menu
+                                ref="time_picker2"
+                                :close-on-content-click="false"
+                                v-model="time_picker2"
+                                :nudge-right="40"
+                                :return-value.sync="reserve.timeEnd"
+                                lazy
+                                transition="scale-transition"
+                                offset-y
+                                full-width
+                                max-width="290px"
+                                min-width="290px"
+                        >
+                            <v-text-field
+                                    slot="activator"
+                                    v-model="reserve.timeEnd"
+                                    label="End rent time"
+                                    prepend-icon="access_time"
+                                    readonly
+                                    required
+                                    :rules="fieldRules"
+                            ></v-text-field>
+                            <v-time-picker
+                                    v-if="time_picker2"
+                                    v-model="reserve.timeEnd"
+                                    full-width
+                                    @change="$refs.time_picker2.save(reserve.timeEnd)"
                             ></v-time-picker>
                         </v-menu>
                     </v-flex>
@@ -164,11 +210,11 @@
                 <v-layout row wrap>
                     <v-flex xs12>
                         <v-text-field
-                                v-model="reserve.number"
-                                label="Number of tourists"
+                                v-model="reserve.persons"
+                                label="Number of passenger"
                                 prepend-icon="group"
                                 :rules="fieldRules"
-                                v-on:keyup="reserve.number = (validNumber(reserve.number, $event)?reserve.number:'')"
+                                v-on:keyup="reserve.persons = (validNumber(reserve.persons, $event)?reserve.persons:'')"
                         ></v-text-field>
                     </v-flex>
                 </v-layout>
@@ -212,42 +258,6 @@
                                 hint="Hint text"
                                 rows="1"
                         ></v-textarea>
-                    </v-flex>
-                </v-layout>
-                <v-layout row wrap v-show="extras.length">
-                    <v-flex xs12>
-                        <v-list three-line>
-                            <template v-for="(item, index) in extras">
-                                <v-subheader
-                                        v-if="index == 0"
-                                >
-                                    Extra Activities
-                                </v-subheader>
-
-                                <v-list-tile
-                                        :key="item.ID"
-                                        avatar
-                                        ripple
-                                        @click=""
-                                >
-                                    <v-list-tile-content>
-                                        <v-list-tile-title>
-                                            {{item.post_title}}
-                                        </v-list-tile-title>
-                                        <v-list-tile-sub-title class="text--primary">Price: {{item.price}} cuc
-                                        </v-list-tile-sub-title>
-                                        <v-list-tile-sub-title v-html="item.post_content"></v-list-tile-sub-title>
-                                    </v-list-tile-content>
-                                    <v-list-tile-action v-show="item.img">
-                                        <v-list-tile-avatar size="60" class="my-2" tile>
-                                            <img :src="item.img">
-                                        </v-list-tile-avatar>
-                                    </v-list-tile-action>
-
-                                </v-list-tile>
-                                <v-divider></v-divider>
-                            </template>
-                        </v-list>
                     </v-flex>
                 </v-layout>
                 <v-layout row wrap mt-3 v-show="items.length">
@@ -316,18 +326,15 @@
 
 <script>
     import axios from 'axios'
-
+    import moment from 'moment';
     export default {
         data: () => ({
             valid: true,
-            opacity: 0.5,
+            opacity: 1,
             load: false,
             name: '',
-            tours: [],
-            tour: {},
-            extras: [],
             cars: [],
-            radioGroup: 1,
+            radioGroup: null,
             reserve: {date: null, time: null},
             interval: {},
             value: 0,
@@ -351,48 +358,17 @@
             ],
             date_picker: null,
             time_picker: null,
+            date_picker2: null,
+            time_picker2: null,
+            currentDate: moment().format('YYYY-MM-DD')
         }),
 
         methods: {
-            selectRent() {
-                let $this = this;
-                if (!params.tour_id)
-                    this.initLoad();
-                else
-                    params.tour_id = false;
-                this.items = this.tours.filter(item => item.ID == this.reserve.tour);
-                this.tour = this.items[0];
-                this.cars = [{
-                    'post_title': 'Sedan',
-                    'price': parseInt(this.tour.price_per_sedan),
-                    'id': 1,
-                    'img': '/img/sedan.png'
-                }, {
-                    'post_title': 'Convertible',
-                    'price': parseInt(this.tour.price_per_convertible),
-                    'id': 2,
-                    'img': '/img/convertible-icon.png'
-                }];
-                axios.get(params.ajax_url, {
-                    params: {
-                        action: 'extra_tour',
-                        tour: this.reserve.tour
-                    }
-                })
-                    .then(function (response) {
-
-                        $this.stopLoad();
-                        $this.extras = response.data;
-                    })
-                    .catch(function (error) {
-                        $this.stopLoad();
-                    });
-            },
             selectCar() {
                 this.updateResumen();
             },
             updateResumen() {
-                this.items = [this.tour];
+                this.items = [];
                 this.items.push(...this.cars.filter(item => item.id == this.reserve.car));
             },
             initLoad() {
@@ -417,10 +393,28 @@
             },
             total() {
                 let total = 0;
+                let $this = this;
                 this.items.filter(item => {
-                    if (item.price) total = total + parseFloat(item.price)
+                    if (item.price){
+                        total = total + parseFloat(item.price);
+                        $this.reserve.car_price = total
+                    }
+
                 });
-                this.reserve.total = total;
+                if(this.reserve){
+                    if(this.reserve.car && this.radioGroup == 3){
+                        if(this.reserve.dateEnd && this.reserve.date){
+                            let diff = moment(this.reserve.dateEnd).diff(this.reserve.date, 'days');
+                            total = total * diff
+                            this.reserve.total = total;
+                            this.reserve.days = diff;
+                        }
+                    }
+                    else
+                        this.reserve.total = total
+                }
+
+
                 return total
             },
             submit() {
@@ -430,10 +424,9 @@
                     let $this = this;
                     this.initLoad();
                     var data = new FormData();
-                    data.append('action', 'reserve_transfer');
+                    data.append('action', 'reserve_car');
                     data.append('reserve', JSON.stringify(this.reserve));
                     axios.post(params.ajax_url, data).then(function (response) {
-                        console.log(response.data);
                         $this.stopLoad();
                         if (response.data == 'success')
                             $this.reserve.sent = true;
@@ -450,27 +443,50 @@
                 this.$refs.form.reset()
             },
             validNumber(val, event) {
-                return !((event.keyCode < 48 || (event.keyCode > 57 && event.keyCode < 96 || event.keyCode > 105)) && (event.keyCode != 8 && event.keyCode != 46 && event.keyCode != 37 && event.keyCode != 39 && event.keyCode != 13)) ? true : false;
+                if(!((event.keyCode < 48 || (event.keyCode > 57 && event.keyCode < 96 || event.keyCode > 105)) && (event.keyCode != 8 && event.keyCode != 46 && event.keyCode != 37 && event.keyCode != 39 && event.keyCode != 13))){
+                    this.updateResumen();
+                    return true;
+                }
+                return false;
+            }
+        },
+        watch: {
+            radioGroup() {
+                this.initLoad();
+                let $this = this;
+                this.cars = [];
+                this.items = [];
+                this.reserve.car = null;
+                this.reserve.type = this.radioGroup;
+                axios.get(params.ajax_url, {
+                    params: {
+                        action: 'rent_car',
+                        car_type: this.radioGroup
+                    }
+                }).then(function (response) {
+                    $this.cars = [{
+                        'post_title': 'Sedan',
+                        'price': parseInt(response.data.price_sedan),
+                        'id': 1,
+                        'car_type': 'sedan',
+                        'type': $this.radioGroup,
+                        'img': '/img/sedan.png'
+                    }, {
+                        'post_title': 'Convertible',
+                        'price': parseInt(response.data.price_convertible),
+                        'id': 2,
+                        'car_type': 'sedan',
+                        'type': $this.radioGroup,
+                        'img': '/img/convertible-icon.png'
+                    }];
+                    $this.stopLoad();
+                })
+                    .catch(function (error) {
+                        $this.stopLoad();
+                    });
             }
         },
         created() {
-            let $this = this;
-            this.initLoad();
-            axios.get(params.ajax_url, {
-                params: {
-                    action: 'rent_car'
-                }
-            }).then(function (response) {
-                $this.tours = response.data;
-                if (params.tour_id) {
-                    $this.reserve.tour = parseInt(params.tour_id);
-                }
-                else $this.stopLoad();
-            })
-                .catch(function (error) {
-                    $this.stopLoad();
-                });
-
         }
     }
 </script>
