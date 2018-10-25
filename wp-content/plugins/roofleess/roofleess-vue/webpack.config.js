@@ -4,10 +4,10 @@ var webpack = require('webpack')
 var resolve = (p) => path.resolve(__dirname, p)
 
 module.exports = {
-  entry: './src/forms/rent-car/main.js',
+  entry: './src/forms/contact/main.js',
   output: {
-    path: resolve('./dist/rent-car/'),
-    publicPath: '/dist/rent-car/',
+    path: resolve('./dist/contact/'),
+    publicPath: '/dist/contact/',
     filename: 'build.js'
   },
   resolve: {

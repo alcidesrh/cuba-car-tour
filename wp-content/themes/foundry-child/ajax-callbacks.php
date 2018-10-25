@@ -164,7 +164,7 @@ function reserve_day_tour()
 
     $headers = array( 'Content-Type: text/html; charset=UTF-8' );
 
-    if ( wp_mail( get_bloginfo( 'admin_email' ), 'Reserva de Habana Tour', $message, $headers ) )
+    if ( wp_mail( get_bloginfo( 'admin_email' ), 'Reserva de rooflesscompany.com', $message, $headers ) )
         echo 'success'; else echo 'error';
     wp_die();
 }
