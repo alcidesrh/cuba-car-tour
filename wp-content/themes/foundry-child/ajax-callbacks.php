@@ -11,7 +11,7 @@ function tour_list()
 {
     $result = [];
     global $post;
-    if ( $posts = get_posts( [ 'post_type' => 'havana-tour-type', 'numberposts' => -1 ] ) )
+    if ( $posts = get_posts( [ 'post_type' => 'havana-car-tour', 'numberposts' => -1 ] ) )
         foreach ( $posts as $value ) {
             $post = $value;
             $post->img = get_the_post_thumbnail_url( $post->ID );
@@ -30,7 +30,7 @@ function day_tour_list()
 {
     $result = [];
     global $post;
-    if ( $posts = get_posts( [ 'post_type' => 'day-tour-type', 'numberposts' => -1 ] ) )
+    if ( $posts = get_posts( [ 'post_type' => 'car-tour-day', 'numberposts' => -1 ] ) )
         foreach ( $posts as $value ) {
             $post = $value;
             $post->img = get_the_post_thumbnail_url( $post->ID );
@@ -48,7 +48,7 @@ function transfer_list()
 {
     $result = [];
     global $post;
-    if ( $posts = get_posts( [ 'post_type' => 'transfer-type', 'numberposts' => -1 ] ) )
+    if ( $posts = get_posts( [ 'post_type' => 'transfer', 'numberposts' => -1 ] ) )
         foreach ( $posts as $value ) {
             $post = $value;
             $post->price_per_sedan = types_render_field( 'precio-por-sedan' );
