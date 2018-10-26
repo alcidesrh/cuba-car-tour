@@ -64,7 +64,6 @@ if ( file_exists( ABSPATH . 'wp-config.php') ) {
 		header( 'Location: ' . $path );
 		exit;
 	}
-
 	define( 'WP_CONTENT_DIR', ABSPATH . 'wp-content' );
 	require_once( ABSPATH . WPINC . '/version.php' );
 
