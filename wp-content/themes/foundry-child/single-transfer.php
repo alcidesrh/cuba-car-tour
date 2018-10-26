@@ -31,7 +31,7 @@ $price = types_render_field( 'precio' );
 
 				</div><a
 					href="<?php echo esc_url( add_query_arg( 'id', $post->ID, get_permalink( getFormPageId($post->ID)) ) )?>"
-					class="btn btn-sm btn-primary pull-right">Reserve</a>
+					class="btn btn-sm btn-primary pull-right">Book Now</a>
 			</div>
 
 		</div>

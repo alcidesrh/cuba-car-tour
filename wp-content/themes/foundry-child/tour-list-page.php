@@ -20,7 +20,7 @@ foreach ( $posts as $value ):
                 <div class="col-lg-6">
                     <div class="post-content">
                         <?php get_template_part( 'inc/content', 'post-title' ); ?>
-                        <?php the_content(); ?>
+                        <p> <?php echo types_render_field( 'descripcion-corta' ); ?></p>
 
                     </div>
                 </div>
@@ -37,7 +37,7 @@ foreach ( $posts as $value ):
                                                  class="btn btn-sm btn-primary">Detail</a></div>
                         <div class="col-xs-6 center"><a
                                     href="<?php echo esc_url( add_query_arg( 'id', $post->ID, get_permalink( getFormPageId($post->ID)) ) )?>"
-                                    class="btn btn-sm btn-primary">Reserve</a></div>
+                                    class="btn btn-sm btn-primary">Book Now</a></div>
                     </div>
                 </div>
 

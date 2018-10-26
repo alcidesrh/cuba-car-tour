@@ -48,7 +48,7 @@ $gallery = CFS()->get('galeria');
                     <div class="row mt-3">
                         <div class="col-lg-6"><a
                                 href="/reserve-your-classic-car-and-tour-havana-cuba/?departure=Havana&amp;car_type=Convertible (cabriolet)&amp;tour=Havana City Tour 2 hours in convertible"
-                                class="btn btn-sm btn-primary">Reserve</a></div>
+                                class="btn btn-sm btn-primary">Book Now</a></div>
                     </div>
                 </div>
 

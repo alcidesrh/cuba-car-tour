@@ -94,6 +94,9 @@ hr{
 .max-height-170{
     max-height: 170px;
 }
+.max-height-400{
+    max-height: 400px;
+}
 .testimonials .quote-author img{
     max-width: 300px;
     height: auto;
@@ -108,8 +111,8 @@ hr{
     color: white !important;
     margin-left: 15px;
 }
-.route-map{
-    max-height: 380px;
+.route-map img{
+    max-height: 400px;
 }
 @media only screen and (max-width: 787px) {
     .logo.logo-dark{
@@ -140,4 +143,10 @@ hr{
     .v-list__tile__content{
         padding: 0px 3px;
     }
+}
+.post-content.tours .post-title, .post-content.tours .tags{
+    display: inline-flex;
+}
+.post-content.tours .btn{
+    margin-bottom: 0px;
 }

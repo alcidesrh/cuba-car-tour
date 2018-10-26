@@ -18,6 +18,8 @@ function tour_list()
             $post->price_per_person = types_render_field( 'precio-por-pasajero' );
             $post->price_per_sedan = types_render_field( 'precio-por-sedan' );
             $post->price_per_convertible = types_render_field( 'precio-por-convertible' );
+            $post->guide = types_render_field( 'guia' );
+            $post->post_content = str_replace(['<p>', '</p>'], '', types_render_field( 'descripcion-corta' ));
             $result[] = $post;
         }
     echo json_encode( $result );
@@ -36,6 +38,8 @@ function day_tour_list()
             $post->img = get_the_post_thumbnail_url( $post->ID );
             $post->price_per_sedan = types_render_field( 'precio-por-sedan' );
             $post->price_per_convertible = types_render_field( 'precio-por-convertible' );
+            $post->guia = types_render_field( 'guia' );
+            $post->post_content = str_replace(['<p>', '</p>'], '', types_render_field( 'descripcion-corta' ));
             $result[] = $post;
         }
     echo json_encode( $result );
@@ -95,6 +99,7 @@ function extra_tour()
             $post = $value;
             $post->img = get_the_post_thumbnail_url( $post->ID );
             $post->price = types_render_field( 'precio' );
+            $post->post_content = wp_trim_words($post->post_content );
             $result[] = $post;
         }
     echo json_encode( $result );
@@ -116,6 +121,7 @@ function reserve_tour()
         $car_price = types_render_field( 'precio-por-sedan' );
     }
     $tour_title = $post->post_title;
+    $guide = $reserve['guide']?'Si':'No';
     if ( !empty( $reserve[ 'extras' ] ) ) {
         $extras = [];
         foreach ( $reserve[ 'extras' ] as $id ) {
@@ -130,7 +136,7 @@ function reserve_tour()
 
     $headers = array( 'Content-Type: text/html; charset=UTF-8' );
 
-    if ( wp_mail( get_bloginfo( 'admin_email' ), 'Reserva de Habana Tour', $message, $headers ) )
+    if ( wp_mail( bpfwp_setting( 'contact-email' ), 'Reserva de Habana Tour', $message, $headers ) )
         echo 'success'; else echo 'error';
     wp_die();
 }
@@ -150,6 +156,7 @@ function reserve_day_tour()
         $car_price = types_render_field( 'precio-por-sedan' );
     }
     $tour_title = $post->post_title;
+    $guide = $reserve['guide']?'Si':'No';
     if ( $includes = cptr_populate( $post->ID ) ) {
         $extras = [];
         foreach ( $includes as $include ) {
@@ -164,7 +171,7 @@ function reserve_day_tour()
 
     $headers = array( 'Content-Type: text/html; charset=UTF-8' );
 
-    if ( wp_mail( get_bloginfo( 'admin_email' ), 'Reserva de rooflesscompany.com', $message, $headers ) )
+    if ( wp_mail( bpfwp_setting( 'contact-email' ), 'Reserva de rooflesscompany.com', $message, $headers ) )
         echo 'success'; else echo 'error';
     wp_die();
 }
@@ -190,7 +197,7 @@ function reserve_transfer()
 
     $headers = array( 'Content-Type: text/html; charset=UTF-8' );
 
-    if ( wp_mail( get_bloginfo( 'admin_email' ), 'Reserva de Habana Tour', $message, $headers ) )
+    if ( wp_mail( bpfwp_setting( 'contact-email' ), 'Reserva de Habana Tour', $message, $headers ) )
         echo 'success'; else echo 'error';
     wp_die();
 }
@@ -213,7 +220,7 @@ function reserve_car()
 
     $headers = array( 'Content-Type: text/html; charset=UTF-8' );
 
-    if ( wp_mail( get_bloginfo( 'admin_email' ), 'Reserva de Habana Tour', $message, $headers ) )
+    if ( wp_mail( bpfwp_setting( 'contact-email' ), 'Reserva de Habana Tour', $message, $headers ) )
         echo 'success'; else echo 'error';
     wp_die();
 }
@@ -228,7 +235,7 @@ function contact()
 
     $headers = array( 'Content-Type: text/html; charset=UTF-8' );
 
-    if ( wp_mail( get_bloginfo( 'admin_email' ), 'Reserva de Habana Tour', $message, $headers ) )
+    if ( wp_mail( bpfwp_setting( 'contact-email' ), 'Reserva de Habana Tour', $message, $headers ) )
         echo 'success'; else echo 'error';
     wp_die();
 }

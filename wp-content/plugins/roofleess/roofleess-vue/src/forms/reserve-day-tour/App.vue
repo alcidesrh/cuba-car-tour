@@ -56,7 +56,14 @@
                         </v-select>
                     </v-flex>
                 </v-layout>
-
+                <v-layout row wrap v-if="guide">
+                    <v-flex xs12>
+                        <v-checkbox
+                                label="With guide"
+                                v-model="reserve.guide"
+                        ></v-checkbox>
+                    </v-flex>
+                </v-layout>
                 <v-layout row wrap>
                     <v-flex xs12>
                         <v-select
@@ -73,7 +80,6 @@
                             <template slot="selection" slot-scope="data">
                                 <div style="width: 100%">
                                     <label class="pl-2 d-inline">{{ data.item.car }}</label>
-                                    <strong class="price-select">price: {{data.item.price}} cuc</strong>
                                 </div>
                             </template>
                             <template slot="item" slot-scope="data">
@@ -82,7 +88,6 @@
                                 </template>
                                 <template v-else>
                                     <label class="pl-2">{{ data.item.car }}</label>
-                                    <strong class="price-select">price: {{data.item.price}} cuc</strong>
                                 </template>
                             </template>
                         </v-select>
@@ -228,14 +233,10 @@
                                         ripple
                                         @click=""
                                 >
-                                    <v-list-tile-action>
-                                    </v-list-tile-action>
                                     <v-list-tile-content>
                                         <v-list-tile-title>
                                             {{item.post_title}}
                                         </v-list-tile-title>
-                                        <v-list-tile-sub-title class="text--primary">Price: {{item.price}} cuc per person
-                                        </v-list-tile-sub-title>
                                         <v-list-tile-sub-title v-html="item.post_content"></v-list-tile-sub-title>
                                     </v-list-tile-content>
                                     <v-list-tile-action v-show="item.img">
@@ -308,6 +309,7 @@
             load: false,
             name: '',
             tours: [],
+            guide: false,
             extras: [],
             cars: [],
             persons: null,
@@ -346,6 +348,7 @@
                     params.tour_id = false;
                 this.items = this.tours.filter(item => item.ID == this.reserve.tour);
                 this.tour = this.items[0];
+                this.guide = this.tour.guide;
                 this.cars = [{
                     car: 'Sedan',
                     price: parseInt(this.tour.price_per_sedan),

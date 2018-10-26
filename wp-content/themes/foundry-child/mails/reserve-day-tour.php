@@ -12,6 +12,8 @@ Reserva tour día completo:
 </br></br>
 Tour: {$tour_title}
 </br></br>
+Asignar guía: {$guide}
+</br></br>
 Carro: {$car_type}, precio: {$car_price} cuc
 </br></br>
 ";

@@ -11,45 +11,47 @@ if ( has_post_thumbnail() ) {
 }
 $gallery = types_render_field( 'galeria' );
 $includes = cptr_populate( $post->ID );
-$duration = types_render_field( 'duracion' );
 $price = types_render_field( 'precio' );
+
 ?>
 <div class="container">
     <article class="post post-medium">
         <div class="row">
-            <div class="col-sm-12 col-md-4">
-                <?php get_template_part( 'inc/content-format', get_post_format() ); ?>
-            </div>
-            <div class="col-sm-12 col-md-8">
-                <div class="post-content">
-                    <?php get_template_part( 'inc/content', 'post-title' ); ?>
-                    <?php  get_template_part('inc/content','post-sharing');?>
-                    <?php if ( !empty( $price ) ): ?>
-                        <h5>Price: <?php echo getPriceCuc( $price ) ?></h5>
-                    <?php endif; ?>
-                    <?php if ( !empty( $duration ) ): ?>
-                        <h5>Duration: <?php echo $duration ?></h5>
-                    <?php endif; ?>
-                    <?php the_content(); ?>
-
-
-                </div><a
-                        href="<?php echo esc_url( add_query_arg( 'id', $post->ID, get_permalink( getFormPageId($post->ID)) ) )?>"
-                        class="btn btn-sm btn-primary pull-right">Reserve</a>
+            <div class="col-sm-12">
+                <div class="post-content tours">
+                    <div class="img-thumbnail d-block">
+                        <img src="<?php echo get_the_post_thumbnail_url()?>" class="max-height-400">
+                    </div>
+                    <div class="mt-3">
+                        <?php get_template_part( 'inc/content', 'post-title' ); ?>
+                        <?php get_template_part( 'inc/content', 'post-sharing' ); ?>
+                        <?php if ( !empty( $price ) ): ?>
+                            <h5>
+                                From: <?php echo getPriceCuc( $price_sedan > $price_conv ? $price_conv : $price_sedan ) ?></h5>
+                        <?php endif; ?>
+                        <p> <?php echo types_render_field( 'descripcion-larga' ); ?></p>
+                        <a
+                                href="<?php echo esc_url( add_query_arg( 'id', $post->ID, get_permalink( getFormPageId( $post->ID ) ) ) ) ?>"
+                                class="btn btn-sm btn-primary pull-right">Book Now</a>
+                    </div>
+                </div>
             </div>
 
         </div>
         <?php if ( isset( $route ) && $route ): ?>
-            <div class="row mt-5">
+            <div class="row mt-3">
                 <div class="col-sm-12">
                     <h4 class="mb-25">Route:</h4>
                 </div>
-                <div class="col-sm-12 route-map">
+                <div class="col-sm-12"">
+                    <div class="img-thumbnail d-block route-map">
                     <?php echo $route; ?>
+                    </div>
+                </div>
                 </div>
             </div>
         <?php endif; ?>
-        <div class="row mt-5">
+        <div class="row mt-3">
             <div class="col-md-12">
                 <ul class="nav nav-tabs">
                     <?php if ( !empty( $includes ) ): ?>

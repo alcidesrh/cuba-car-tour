@@ -30,7 +30,7 @@ foreach ( $posts as $value ):
                     <div class="row mt-1">
                         <div class="col-xs-12 col-md-6 center">
                             <a href="<?php echo esc_url( add_query_arg( 'id', $post->ID, get_permalink( getFormPageId( $post->ID ) ) ) ) ?>"
-                                    class="btn btn-sm btn-primary">Reserve</a>
+                                    class="btn btn-sm btn-primary">Book Now</a>
                         </div>
                     </div>
                 </div>

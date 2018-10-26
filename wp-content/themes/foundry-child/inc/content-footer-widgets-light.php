@@ -27,18 +27,35 @@
         				dynamic_sidebar('footer3');
         			echo '</div><div class="clear"></div>';
         		}
-        		
-        		if( ( is_active_sidebar('footer4') ) ){
-        			echo '<div class="col-md-3 col-sm-6">';
-        				dynamic_sidebar('footer1');
-        			echo '</div><div class="col-md-3 col-sm-6">';
-        				dynamic_sidebar('footer2');
-        			echo '</div><div class="col-md-3 col-sm-6">';
-        				dynamic_sidebar('footer3');
-        			echo '</div><div class="col-md-3 col-sm-6">';
-        				dynamic_sidebar('footer4');
-        			echo '</div><div class="clear"></div>';
-        		}
+
+            if ( ( is_active_sidebar( 'footer4' ) ) ) {
+                echo '<div class="col-md-3 col-sm-6">'; //dynamic_sidebar('footer1');?>
+                <div id="text-1" class="widget widget_text"><h6
+                            class="title">Contact</h6>
+                    <hr>
+                    <div class="textwidget">
+                        <div>
+                            <strong>Email: </strong><?php echo bpfwp_setting( 'contact-email' );?>
+                        </div>
+                        <div>
+                            <strong>Phone: </strong><?php echo bpfwp_setting( 'phone' );?>
+                        </div>
+                        <div>
+                            <strong>URL: </strong><?php echo get_bloginfo( 'url' )?>
+                        </div>
+                        <div>
+                            <strong>Address: </strong><?php echo bpfwp_setting( 'address' )['text'];?>
+                        </div>
+                    </div>
+                </div>
+                <?php echo '</div><div class="col-md-3 col-sm-6">';
+                dynamic_sidebar( 'footer2' );
+                echo '</div><div class="col-md-3 col-sm-6">';
+                dynamic_sidebar( 'footer3' );
+                echo '</div><div class="col-md-3 col-sm-6">';
+                dynamic_sidebar( 'footer4' );
+                echo '</div><div class="clear"></div>';
+            }
         	?>
         </div>
 

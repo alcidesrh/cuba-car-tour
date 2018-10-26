@@ -58,6 +58,15 @@
                         </v-select>
                     </v-flex>
                 </v-layout>
+                <v-layout row wrap v-if="guide">
+                    <v-flex xs12>
+                        <v-checkbox
+                                label="With guide"
+                                v-model="reserve.guide"
+                                prepend-icon="location_on"
+                        ></v-checkbox>
+                    </v-flex>
+                </v-layout>
                 <v-layout row wrap>
                     <v-flex xs12>
                         <v-select
@@ -337,6 +346,7 @@
             name: '',
             tours: [],
             tour: {},
+            guide: false,
             extras: [],
             cars: [],
             persons: null,
@@ -374,9 +384,10 @@
                     this.initLoad();
                 else
                     params.tour_id = false;
-                console.log(this.tours, this.reserve.tour);
                 this.items = this.tours.filter(item => item.ID == this.reserve.tour);
                 this.tour = this.items[0];
+                this.guide = this.tour.guide;
+
                 this.cars = [{
                     'post_title': 'Sedan',
                     'price': parseInt(this.tour.price_per_sedan),
@@ -446,7 +457,6 @@
                     data.append('reserve', JSON.stringify(this.reserve));
                     axios.post(params.ajax_url, data).then(function (response) {
                         $this.stopLoad();
-                        console.log(response.data);
                         if (response.data == 'success')
                             $this.reserve.sent = true;
                         else
