@@ -26,14 +26,12 @@ global $post;
                 <?php endif; ?>
                 <div class="mt-1">
                     <p>
-                        <?php echo wp_trim_words( $post->post_content, 50, true ); ?>
+                        <?php
+                        $text = types_render_field( 'descripcion-corta' );
+                        echo  $text?$text:wp_trim_words( $post->post_content, 50, true ); ?>
                     </p>
                 </div>
             </div>
-            <!--            <a-->
-            <!--                    href="-->
-            <?php //echo esc_url( add_query_arg( 'id', $post->ID, get_permalink( getFormPageId( $post->ID ) ) ) ) ?><!--"-->
-            <!--                    class="btn btn-sm btn-primary pull-right">Reserve</a>-->
         </div>
     </div>
 </div>

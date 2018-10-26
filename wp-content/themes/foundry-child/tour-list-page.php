@@ -26,7 +26,7 @@ foreach ( $posts as $value ):
                 </div>
                 <div class="col-lg-3">
                     <?php if ( !empty( $duration ) ): ?>
-                        <h5>Duration: <?php echo $duration ?></h5>
+                        <h5>Duration: <?php echo $duration ?> hours</h5>
                     <?php endif; ?>
                     <?php if ( !empty( $price_sedan || $price_conv ) ): ?>
                         <h5>From: <?php echo getPriceCuc( $price_sedan > $price_conv ? $price_conv : $price_sedan  ) ?></h5>

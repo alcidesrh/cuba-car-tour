@@ -32,7 +32,7 @@ $route = $price_conv = types_render_field( 'ruta' );
                                 From: <?php echo getPriceCuc( $price_sedan > $price_conv ? $price_conv : $price_sedan ) ?></h5>
                         <?php endif; ?>
                         <?php if ( !empty( $duration ) ): ?>
-                            <h5>Duration: <?php echo $duration ?></h5>
+                            <h5>Duration: <?php echo $duration ?> hours</h5>
                         <?php endif; ?>
                         <p> <?php echo types_render_field( 'descripcion-larga' ); ?></p>
                         <a
